@@ -1,46 +1,79 @@
-# Coderr/ Frontend Project
+# Coderr Frontend
 
-![Coderr Logo](assets/logo/logo_coderr.svg)
+Coderr Frontend is a Vanilla JavaScript project that serves as the user interface for the Coderr platform. It interacts with the Django backend to manage users, offers, orders, and reviews.
 
-Dieses Projekt ist ein einfaches Frontend, das mit **Vanilla JavaScript** (reines JavaScript ohne Frameworks) erstellt wurde. Es wurde speziell entwickelt, um Schülern der **Developer Akademie** mit Backend-Erfahrung den Einstieg in kleinere Frontend-Anpassungen zu erleichtern.
+## Features
 
----
+- **User Management**
 
-## Voraussetzungen
+  - Registration and login for business and customer users
+  - Profile view and editing
 
-- Ein funktionierendes Django-Backend (`Coderr/`), das **nicht** in diesem Projekt enthalten ist.
-- Visual Studio Code mit der **Live Server**-Erweiterung oder eine ähnliche Möglichkeit, die `index.html` lokal im Browser zu starten.
+- **Offers and Orders**
 
----
+  - Browse and filter offers
+  - Create and edit offers (business users)
+  - Place and manage orders
 
-## Nutzung
+- **Reviews**
 
-1. Stelle sicher, dass das Backend `Coderr/` läuft.
-2. Öffne dieses Projekt in **Visual Studio Code**.
-3. Rechtsklicke auf die Datei `index.html` und wähle **Open with Live Server**, um das Projekt zu starten.
+  - Submit and view reviews for business users
+  - Sorting and filtering for reviews
 
----
+- **File Uploads**
 
-## Ziel des Projekts
+  - Upload profile and offer images
 
-Dieses Frontend wurde bewusst mit **Vanilla JavaScript** erstellt, um die folgenden Ziele zu erreichen:
-
-- **Einfacher Einstieg**: Durch den Verzicht auf Frameworks wie React oder Angular bleibt der Code leicht verständlich und nachvollziehbar.
-- **Lernen durch Anpassung**: Schüler können den Code anpassen, um kleine Änderungen vorzunehmen und Frontend-Konzepte besser zu verstehen.
-- **Backend-Erweiterung**: Das Projekt lässt sich einfach an das bestehende Django-Backend `Coderr/` anbinden.
+- **Statistics**
+  - Display platform statistics (e.g., number of offers, reviews, average rating)
 
 ---
 
-## Hinweis
+## Project Structure
 
-Dieses Projekt ist **ausschließlich für Schüler der Developer Akademie** gedacht und nicht zur freien Nutzung oder Weitergabe freigegeben.
+```
+frontend/
+├── assets/             # Images, icons, fonts
+├── scripts/            # Page-specific JS files
+├── shared/             # Reusable JS and CSS files
+├── styles/             # Page-specific CSS files
+├── index.html          # Homepage
+├── login.html          # Login page
+├── registration.html   # Registration page
+├── own_profile.html    # Own profile
+├── business_profile.html # Public business profile
+├── customer_profile.html # Public customer profile
+├── offer_list.html     # Offer overview
+├── offer.html          # Offer detail page
+├── imprint.html        # Imprint
+├── privacy_policy.html # Privacy policy
+```
+
+## Requirements
+
+- A running Coderr backend ([see backend README](https://github.com/LauraHexx/Coderr_Backend/README.md))
+- Visual Studio Code with Live Server or similar
+
+## Installation & Usage
+
+1. **Start the backend**  
+   Make sure the backend is running (see backend README).
+
+2. **Open the frontend**  
+   Open the frontend project in Visual Studio Code.
+
+3. **Start Live Server**  
+   Right-click on `index.html` → "Open with Live Server" (or open manually in your browser).
 
 ---
 
-## JSDoc - ansehen
+## Development
 
-1. Navigiere in den Ordner `docs/`
-2. Du kannst das Projekt öffnen mit Doppelklick auf `docs/index.html`, oder im Terminal 
-    Windows: `start docs/index.html`
-    macOS: `open docs/index.html`
-    Linus: `xdg-open docs/index.html` 
+- You can directly edit HTML, CSS, and JS files.
+- Communication with the backend is done via REST API calls (see `shared/scripts/api.js`).
+
+## Testing
+
+The frontend does not include automated tests. Changes can be tested directly in the browser.
+
+---
