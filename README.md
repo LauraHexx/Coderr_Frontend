@@ -51,7 +51,7 @@ frontend/
 
 ## Requirements
 
-- A running Coderr backend ([see backend README](https://github.com/LauraHexx/Coderr_Backend/README.md))
+- A running Coderr backend ([see backend README](https://github.com/LauraHexx/Coderr_Backend/))
 - Visual Studio Code with Live Server or similar
 
 ## Installation & Usage
